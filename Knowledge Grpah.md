@@ -1,127 +1,128 @@
-# Decoder-Only Transformer Knowledge Graph
+# Knowledge Graph
 
-```mermaid
-graph TD
+## Domain: Transformer Architecture
 
-A[Tokenization]
-B[Embeddings]
+[[01-Decoder-Only-Transformer-Overview]]
+→ [[02-Tokenization]]
+→ [[03-Embeddings]]
+→ [[06-Queries-Keys-Values]]
+→ [[07-Self-Attention]]
+→ [[08-Causal-Masking]]
+→ [[09-Multi-Head-Attention]]
+→ [[10-Residual-Connections]]
+→ [[11-LayerNorm]]
+→ [[12-FeedForward-Network]]
+→ [[13-Transformer-Layer]]
+→ [[14-Final-Hidden-State]]
+→ [[15-Logits]]
+→ [[16-Softmax]]
+→ [[17-Token-Sampling]]
 
-C[Input Matrix X]
+---
 
-D[Query Projection]
-E[Key Projection]
-F[Value Projection]
+## Domain: Authentication & JWT
 
-G[Q Matrix]
-H[K Matrix]
-I[V Matrix]
+[[Authentication]]
+↔ [[Authorization]]
+↔ [[Protected API]]
 
-J[Attention Scores]
+[[User Authentication]]
+↔ [[Authentication]]
+↔ [[Password Verification]]
+↔ [[Login Flow]]
 
-K[Causal Mask]
+[[Login Flow]]
+↔ [[Access Token]]
+↔ [[Refresh Token]]
 
-L[Softmax]
+[[JWT Authentication]]
+↔ [[JSON Web Token (JWT)]]
+↔ [[Access Token]]
+↔ [[Refresh Token]]
 
-M[Attention Weights]
+[[Token Signing]]
+↔ [[JSON Web Token (JWT)]]
+↔ [[Token Validation]]
 
-N[Attention Output]
+[[Access Token]]
+↔ [[Authorization Header]]
+↔ [[Protected API]]
+↔ [[API Authentication]]
 
-O[Multi Head Attention]
+[[Refresh Token]]
+↔ [[Cookie Authentication]]
+↔ [[HttpOnly Cookie]]
+↔ [[Browser]]
 
-P[Output Projection]
+[[Refresh Flow]]
+↔ [[Refresh Token]]
+↔ [[Access Token]]
+↔ [[Token Rotation]]
 
-Q[Residual Connection]
+[[Session Management]]
+↔ [[Refresh Flow]]
+↔ [[Logout Flow]]
 
-R[LayerNorm]
+[[Frontend]]
+↔ [[Browser]]
+↔ [[Backend]]
 
-S[Feed Forward Network]
+[[Frontend]]
+↔ [[Access Token]]
 
-T[Residual Connection]
+[[Browser]]
+↔ [[HttpOnly Cookie]]
 
-U[LayerNorm]
+[[Backend]]
+↔ [[User Authentication]]
+↔ [[Token Validation]]
+↔ [[JWT Authentication]]
 
-V[Transformer Layer]
+[[Protected API]]
+↔ [[User Data Access]]
 
-W[Stack Of Layers]
+---
 
-X[Final Hidden State]
+## Major Clusters
 
-Y[Logits]
+### Identity Verification
 
-Z[Softmax]
+- [[Authentication]]
+- [[User Authentication]]
+- [[Password Verification]]
+- [[Login Flow]]
 
-AA[Token Selection]
+### Token Infrastructure
 
-AB[Next Token]
+- [[JSON Web Token (JWT)]]
+- [[Token Signing]]
+- [[Token Validation]]
+- [[Access Token]]
+- [[Refresh Token]]
 
-A --> B
-B --> C
+### Session Lifecycle
 
-C --> D
-C --> E
-C --> F
+- [[Refresh Flow]]
+- [[Token Rotation]]
+- [[Session Management]]
+- [[Logout Flow]]
 
-D --> G
-E --> H
-F --> I
+### Client-Server Architecture
 
-G --> J
-H --> J
+- [[Frontend]]
+- [[Browser]]
+- [[Backend]]
 
-J --> K
-K --> L
-L --> M
+### API Security
 
-M --> N
-I --> N
+- [[Authorization]]
+- [[Authorization Header]]
+- [[Protected API]]
+- [[API Authentication]]
+- [[User Data Access]]
 
-N --> O
-O --> P
+### Web Security
 
-P --> Q
-C --> Q
-
-Q --> R
-
-R --> S
-
-S --> T
-R --> T
-
-T --> U
-
-U --> V
-
-V --> W
-
-W --> X
-
-X --> Y
-
-Y --> Z
-
-Z --> AA
-
-AA --> AB
-AB --> A
-```
-
-## Learning Order
-
-1. [[01-Decoder-Only-Transformer-Overview]]
-2. [[02-Tokenization]]
-3. [[03-Embeddings]]
-4. [[04-Matrix-Multiplication]]
-5. [[05-Linear-Projections]]
-6. [[06-Queries-Keys-Values]]
-7. [[07-Self-Attention]]
-8. [[08-Causal-Masking]]
-9. [[09-Multi-Head-Attention]]
-10. [[10-Residual-Connections]]
-11. [[11-LayerNorm]]
-12. [[12-FeedForward-Network]]
-13. [[13-Transformer-Layer]]
-14. [[14-Final-Hidden-State]]
-15. [[15-Logits]]
-16. [[16-Softmax]]
-17. [[17-Token-Sampling]]
+- [[Cookie Authentication]]]
+- [[JWT Authentication]]
+- [[HttpOnly Cookie]]
